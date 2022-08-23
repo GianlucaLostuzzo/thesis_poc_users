@@ -1,0 +1,32 @@
+{
+  "pages": [
+    {
+      "id": "Login",
+      "isDefault": false
+    },
+    {
+      "id": "Iscrizione",
+      "isDefault": true
+    },
+    {
+      "id": "Utente",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "clonedFromApplicationId": "62f362dbc0afc81462c1910b",
+  "color": "#FFEBFB",
+  "icon": "book",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "deleted": false
+}
