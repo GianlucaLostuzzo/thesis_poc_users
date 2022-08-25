@@ -1170,6 +1170,11 @@
                     },
                     {
                       "widgetName": "Text5",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                       "searchTags": [
@@ -1514,7 +1519,11 @@
                       "hideCard": false,
                       "defaultOptionValue": "{{\n            {\n              label: Select3.options[0].label,\n              value: NomeProv.data[0].nome\n            }\n          }}",
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
@@ -1547,7 +1556,8 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "onOptionChange": "{{Comuni.run()}}"
                     },
                     {
                       "tabId": "",
