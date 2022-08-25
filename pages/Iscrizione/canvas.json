@@ -29,9 +29,13 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "Button1",
-              "onClick": "{{Iscriviti.run(() => Invia_conferma.run(), () => {})}}",
+              "onClick": "{{Iscriviti.run(() =>\t\t\t\t\tshowAlert('Richiesta inviata!','success'), () => {});\nInvia_conferma.run()\n}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
               "searchTags": [
