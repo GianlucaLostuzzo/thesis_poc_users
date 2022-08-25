@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE utenti\n\tSET datanascita = '{{DatePicker1.selectedDate}}', cf = '{{Input1.text}}', telefono = '{{Input2.text}}'\nWHERE cf = '{{Text4Copy.text}}';\n\nUPDATE residenze\n\tSET persona = '{{Input1.text}}'\nWHERE persona = '{{Text4Copy.text}}';\n\n",
+      "body": "UPDATE utenti\n\tSET datanascita = '{{DatePicker1.selectedDate}}', cf = '{{Input1.text}}', telefono = '{{Input2.text}}'\nWHERE cf = '{{Text4Copy.text}}';\n\n",
       "pluginSpecifiedTemplates": [
         {
           "value": false
