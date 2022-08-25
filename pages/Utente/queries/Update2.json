@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Update",
+    "name": "Update2",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE residenze\n\tSET via = '{{Input3.text}}', comune = '{{Text9.text}}'\nWHERE persona = '{{Input1.text}}' and via = '{{Input3.text}}';\nUPDATE utenti\n  SET datanascita = '{{DatePicker1.selectedDate}}', cf = '{{Input1.text}}', telefono = '{{Input2.text}}'\nWHERE cf = '{{Input1.text}}';\n\n",
+      "body": "UPDATE utenti\n\tSET datanascita = '{{DatePicker1.selectedDate}}', cf = '{{Input1.text}}', telefono = '{{Input2.text}}'\nWHERE cf = '{{Text4Copy.text}}';\n\nUPDATE residenze\n\tSET persona = '{{Input1.text}}'\nWHERE persona = '{{Text4Copy.text}}';\n\n",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -38,15 +38,14 @@
       "DatePicker1.selectedDate",
       "Input1.text",
       "Input2.text",
-      "Input3.text",
-      "Text9.text"
+      "Text4Copy.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Utente_Update",
+  "id": "Utente_Update2",
   "deleted": false,
-  "gitSyncId": "62fcb9a95960e1776bd869e7_630721517bc498130593cd60"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_63072fb77bc498130593cd6d"
 }

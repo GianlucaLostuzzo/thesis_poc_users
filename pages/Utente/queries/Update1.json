@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Indirizzo",
+    "name": "Update1",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -18,14 +18,14 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT Via, Nome, Provincia\nFROM residenze\n\tJOIN comuni on comune = codice\nWHERE persona = '{{Text4Copy.text}}';",
+      "body": "UPDATE residenze\n\tSET via = '{{Input3.text}}', comune = '{{Text9.text}}'\nWHERE persona = '{{Input1.text}}' and via = '{{Input3.text}}';\n\n",
       "pluginSpecifiedTemplates": [
         {
           "value": false
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +35,16 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Text4Copy.text"
+      "Input1.text",
+      "Input3.text",
+      "Text9.text"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Utente_Indirizzo",
+  "id": "Utente_Update1",
   "deleted": false,
-  "gitSyncId": "62fcb9a95960e1776bd869e7_6305f6c28401e60ac383fab1"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_630721517bc498130593cd60"
 }
