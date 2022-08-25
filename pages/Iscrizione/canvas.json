@@ -587,7 +587,7 @@
               "widgetName": "Table3",
               "defaultPageSize": 0,
               "columnOrder": [
-                "cf"
+                "idutente"
               ],
               "dynamicPropertyPathList": [],
               "isVisibleDownload": true,
@@ -651,18 +651,18 @@
                   "key": "childStylesheet.editActions.discardBorderRadius"
                 },
                 {
-                  "key": "primaryColumns.cf.computedValue"
+                  "key": "primaryColumns.idutente.computedValue"
                 }
               ],
               "leftColumn": 16,
               "primaryColumns": {
-                "cf": {
+                "idutente": {
                   "allowCellWrapping": false,
                   "index": 0,
                   "width": 150,
-                  "originalId": "cf",
-                  "id": "cf",
-                  "alias": "cf",
+                  "originalId": "idutente",
+                  "id": "idutente",
+                  "alias": "idutente",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -676,10 +676,10 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "cf",
+                  "label": "idutente",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cf\"]))}}",
+                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idutente\"]))}}",
                   "cellBackground": ""
                 }
               },
