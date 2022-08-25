@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Update2",
+    "name": "CodUser",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -18,14 +18,14 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE utenti\n\tSET datanascita = '{{DatePicker1.selectedDate}}', cf = '{{Input1.text}}', telefono = '{{Input2.text}}'\nWHERE idutente = '{{Text11.text}}';\n\n",
+      "body": "SELECT idutente\nFROM utenti\nWHERE mail = '{{appsmith.user.email}}';",
       "pluginSpecifiedTemplates": [
         {
           "value": false
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,17 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "DatePicker1.selectedDate",
-      "Input1.text",
-      "Input2.text",
-      "Text11.text"
+      "appsmith.user.email"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Utente_Update2",
+  "id": "Utente_CodUser",
   "deleted": false,
-  "gitSyncId": "62fcb9a95960e1776bd869e7_63072fb77bc498130593cd6d"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_630744b77bc498130593cd7a"
 }
