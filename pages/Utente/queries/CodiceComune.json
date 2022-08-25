@@ -21,7 +21,7 @@
       "body": "SELECT codice\nFROM comuni\nWHERE nome = '{{Select4.selectedOptionValue}}';",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },

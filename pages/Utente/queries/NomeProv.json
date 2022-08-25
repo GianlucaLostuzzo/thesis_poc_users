@@ -21,7 +21,7 @@
       "body": "SELECT nome\nFROM province\nWHERE codice = '{{Text4CopyCopyCopy.text}}';",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },

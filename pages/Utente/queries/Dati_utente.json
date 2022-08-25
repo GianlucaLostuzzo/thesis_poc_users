@@ -21,7 +21,7 @@
       "body": "SELECT datanascita, cf, telefono, lavoraper\nFROM utenti\nWHERE mail = '{{appsmith.user.email}}'",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },

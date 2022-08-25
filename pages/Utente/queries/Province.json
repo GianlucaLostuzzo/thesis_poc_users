@@ -21,7 +21,7 @@
       "body": "SELECT nome\nFROM province;",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },

@@ -21,7 +21,7 @@
       "body": "SELECT Via, Nome, Provincia\nFROM residenze\n\tJOIN comuni on comune = codice\nWHERE persona = '{{Text4Copy.text}}';",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },

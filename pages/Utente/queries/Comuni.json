@@ -21,7 +21,7 @@
       "body": "SELECT nome\nFROM comuni\nWHERE provincia = (SELECT codice\n\t\t\t\t\t\t\t\t\t FROM province\n\t\t\t\t\t\t\t\t\t WHERE codice = '{{Text4CopyCopyCopy.text}}');",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
