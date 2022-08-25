@@ -30,6 +30,14 @@
               "widgetName": "Container1",
               "borderColor": "transparent",
               "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "animateLoading"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
               "searchTags": [
@@ -43,7 +51,7 @@
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
               "shouldScrollContents": true,
-              "animateLoading": true,
+              "animateLoading": "true",
               "parentColumnSpace": 12.5625,
               "leftColumn": 4,
               "dynamicBindingPathList": [
@@ -1256,6 +1264,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
+                      "onClick": "{{showModal('Modal1')}}",
                       "buttonColor": "#312e81",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1270,7 +1279,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 10.6796875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 43,
                       "dynamicBindingPathList": [
                         {
@@ -1318,7 +1331,7 @@
               "rightColumn": 60,
               "widgetId": "9wwid47aco",
               "containerStyle": "card",
-              "isVisible": true,
+              "isVisible": "true",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
@@ -1362,7 +1375,7 @@
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 500,
+                  "minHeight": 488,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -1375,6 +1388,167 @@
                     }
                   ],
                   "children": [
+                    {
+                      "widgetName": "Text9",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 31,
+                      "bottomRow": 35,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": false,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "dynamicTriggerPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "leftColumn": 43,
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "{{CodiceComune.data[0].codice}}",
+                      "key": "tvx601t42f",
+                      "isDeprecated": false,
+                      "rightColumn": 59,
+                      "textAlign": "LEFT",
+                      "widgetId": "dp890midhs",
+                      "isVisible": false,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "df3dr8rtyx",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Select4",
+                      "isFilterable": true,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "labelText": "Città",
+                      "searchTags": [
+                        "dropdown"
+                      ],
+                      "topRow": 31,
+                      "bottomRow": 35,
+                      "parentRowSpace": 10,
+                      "labelWidth": 5,
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "{{\n            {\n              label: Select4.options[0].label,\n              value: Text4CopyCopy1.text\n            }\n          }}",
+                      "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "leftColumn": 3,
+                      "labelPosition": "Auto",
+                      "options": "{{Comuni.data.map( (obj) =>{ return  {'label': obj.nome, 'value': obj.nome } })}}",
+                      "placeholderText": "Seleziona",
+                      "isDisabled": false,
+                      "key": "5d5ai9eqp0",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 40,
+                      "widgetId": "gnpohxeddg",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "df3dr8rtyx",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "onOptionChange": "{{CodiceComune.run()}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Select3",
+                      "isFilterable": true,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "labelText": "Provincia",
+                      "searchTags": [
+                        "dropdown"
+                      ],
+                      "topRow": 36,
+                      "bottomRow": 40,
+                      "parentRowSpace": 10,
+                      "labelWidth": 5,
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "{{\n            {\n              label: Select3.options[0].label,\n              value: NomeProv.data[0].nome\n            }\n          }}",
+                      "animateLoading": true,
+                      "dynamicTriggerPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "leftColumn": 3,
+                      "labelPosition": "Auto",
+                      "options": "{{Province.data.map( (obj) =>{ return  {'label': obj.nome, 'value': obj.nome } })}}",
+                      "placeholderText": "Select option",
+                      "isDisabled": false,
+                      "key": "5d5ai9eqp0",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 40,
+                      "widgetId": "gxbf43q0u3",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "df3dr8rtyx",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                    },
                     {
                       "tabId": "",
                       "boxShadow": "NONE",
@@ -1427,7 +1601,13 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "Button3",
+                              "onClick": "{{Update.run(() => showAlert('Dati cambiati!','success'), () => {});\ncloseModal('Modal1')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
@@ -1441,7 +1621,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 3.40625,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 32,
                               "dynamicBindingPathList": [
                                 {
@@ -1476,6 +1660,11 @@
                               "widgetName": "Button2",
                               "onClick": "{{closeModal('Modal1')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
@@ -1750,7 +1939,7 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
-                      "leftColumn": 3,
+                      "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -1895,130 +2084,6 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "iconAlign": "left",
                       "defaultText": "{{Indirizzo.data[0].via}}"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "Select1",
-                      "isFilterable": true,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "Città",
-                      "searchTags": [
-                        "dropdown"
-                      ],
-                      "topRow": 31,
-                      "bottomRow": 35,
-                      "parentRowSpace": 10,
-                      "labelWidth": 5,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "defaultOptionValue": "GREEN",
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 3,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "labelPosition": "Auto",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "00mur6frkj",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 40,
-                      "widgetId": "vyhg2rv8oo",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "df3dr8rtyx",
-                      "labelAlignment": "left",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "Select2",
-                      "isFilterable": true,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "Provincia",
-                      "searchTags": [
-                        "dropdown"
-                      ],
-                      "topRow": 36,
-                      "bottomRow": 40,
-                      "parentRowSpace": 10,
-                      "labelWidth": 5,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "defaultOptionValue": "GREEN",
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 3,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "labelPosition": "Auto",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "00mur6frkj",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 40,
-                      "widgetId": "alxlxsiy8a",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "df3dr8rtyx",
-                      "labelAlignment": "left",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                     }
                   ],
                   "isDisabled": false,
@@ -2037,7 +2102,7 @@
                 }
               ],
               "key": "ahuc8mhtv3",
-              "height": 500,
+              "height": 488,
               "isDeprecated": false,
               "rightColumn": 23,
               "detachFromLayout": true,
@@ -2055,6 +2120,36 @@
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "Utente_NomeProv",
+              "name": "NomeProv",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Text4CopyCopyCopy.text"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Utente_Province",
+              "name": "Province",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Utente_CodiceComune",
+              "name": "CodiceComune",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select4.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Utente_Dati_utente",
               "name": "Dati_utente",
@@ -2074,6 +2169,18 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Text4Copy.text"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Utente_Comuni",
+              "name": "Comuni",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Text4CopyCopyCopy.text"
               ],
               "timeoutInMillisecond": 10000
             }
