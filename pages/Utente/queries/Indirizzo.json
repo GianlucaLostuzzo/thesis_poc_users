@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT Via, Nome, Provincia\nFROM residenze\n\tJOIN comuni on comune = codice\nWHERE persona = '{{Text4Copy.text}}';",
+      "body": "SELECT Via, Nome, Provincia\nFROM residenze\n\tJOIN comuni on comune = codice\nWHERE persona = (SELECT idUtente\n\t\t\t\t\t\t\t\t FROM utenti\n\t\t\t\t\t\t\t\t WHERE mail = '{{appsmith.user.email}}');",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Text4Copy.text"
+      "appsmith.user.email"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

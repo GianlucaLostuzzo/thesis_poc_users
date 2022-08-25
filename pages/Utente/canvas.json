@@ -2799,7 +2799,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Text4Copy.text"
+                "appsmith.user.email"
               ],
               "timeoutInMillisecond": 10000
             }

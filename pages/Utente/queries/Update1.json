@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE residenze\n\tSET via = '{{Input3.text}}', comune = '{{Text9.text}}'\nWHERE persona = '{{Input1.text}}' and via = '{{Input3.text}}';\n\n",
+      "body": "UPDATE residenze\n\tSET via = '{{Input3.text}}', comune = '{{Text9.text}}'\nWHERE via = '{{Input3.text}}' and persona = (select idUtente\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t from utenti\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t where mail = '{{appsmith.user.email}}');\n\n",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -35,9 +35,9 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Input1.text",
       "Input3.text",
-      "Text9.text"
+      "Text9.text",
+      "appsmith.user.email"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
