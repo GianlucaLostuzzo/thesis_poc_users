@@ -1458,7 +1458,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{\n            {\n              label: Select4.options[0].label,\n              value: Select4.options[0].value\n            }\n          }}",
                       "animateLoading": true,
                       "dynamicTriggerPathList": [
                         {
@@ -1474,6 +1474,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "leftColumn": 3,
@@ -1608,7 +1611,7 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "Button3",
-                              "onClick": "{{Update.run(() => showAlert('Dati cambiati!','success'), () => {});\ncloseModal('Modal1')}}",
+                              "onClick": "{{Update.run(() => showAlert('Dati cambiati!','success'), () => {});\ncloseModal('Modal1');\nnavigateTo('Iscrizione')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -2402,7 +2405,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Text4CopyCopyCopy.text"
+                "Select3.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }
