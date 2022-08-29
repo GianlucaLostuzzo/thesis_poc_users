@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "CodUser",
+    "name": "NomeProv",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Utente",
+    "pageId": "Profilo",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT idutente\nFROM utenti\nWHERE mail = '{{appsmith.user.email}}';",
+      "body": "SELECT nome\nFROM province\nWHERE codice = '{{Text4CopyCopyCopy.text}}';",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.user.email"
+      "Text4CopyCopyCopy.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Utente_CodUser",
+  "id": "Profilo_NomeProv",
   "deleted": false,
-  "gitSyncId": "62fcb9a95960e1776bd869e7_630744b77bc498130593cd7a"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_63071f6f7bc498130593cd5e"
 }

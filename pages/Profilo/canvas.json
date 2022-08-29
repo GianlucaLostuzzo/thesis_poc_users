@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Utente",
-    "slug": "utente",
+    "name": "Profilo",
+    "slug": "profilo",
     "layouts": [
       {
         "viewMode": false,
@@ -1552,6 +1552,7 @@
                       "boxShadow": "none",
                       "widgetName": "Select3",
                       "isFilterable": true,
+                      "dynamicPropertyPathList": [],
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
                       "labelText": "Provincia",
@@ -1660,7 +1661,7 @@
                               "boxShadow": "none",
                               "widgetName": "Button3",
                               "onClick": "{{Update1.run(() => showAlert('Dati cambiati!','success'), () => {});\ncloseModal('Modal1');\nnavigateTo('Iscrizione')}}",
-                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "buttonColor": "#312e81",
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "onClick"
@@ -1686,9 +1687,6 @@
                               ],
                               "leftColumn": 32,
                               "dynamicBindingPathList": [
-                                {
-                                  "key": "buttonColor"
-                                },
                                 {
                                   "key": "borderRadius"
                                 }
@@ -1717,7 +1715,7 @@
                               "boxShadow": "none",
                               "widgetName": "Button2",
                               "onClick": "{{closeModal('Modal1')}}",
-                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "buttonColor": "#312e81",
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "onClick"
@@ -1739,9 +1737,6 @@
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
-                                {
-                                  "key": "buttonColor"
-                                },
                                 {
                                   "key": "borderRadius"
                                 }
@@ -2555,7 +2550,7 @@
                               "boxShadow": "none",
                               "widgetName": "Button5",
                               "onClick": "{{Update2.run(() => showAlert('Dati cambiati!','success'), () => {});\nnavigateTo('Iscrizione')}}",
-                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "buttonColor": "#312e81",
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "onClick"
@@ -2581,9 +2576,6 @@
                               ],
                               "leftColumn": 32,
                               "dynamicBindingPathList": [
-                                {
-                                  "key": "buttonColor"
-                                },
                                 {
                                   "key": "borderRadius"
                                 }
@@ -2612,7 +2604,7 @@
                               "boxShadow": "none",
                               "widgetName": "Button4",
                               "onClick": "{{closeModal('Modal2')}}",
-                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "buttonColor": "#1e3a8a",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
@@ -2629,9 +2621,6 @@
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
-                                {
-                                  "key": "buttonColor"
-                                },
                                 {
                                   "key": "borderRadius"
                                 }
@@ -2839,7 +2828,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Utente_Indirizzo",
+              "id": "Profilo_Indirizzo",
               "name": "Indirizzo",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2851,7 +2840,7 @@
           ],
           [
             {
-              "id": "Utente_NomeProv",
+              "id": "Profilo_NomeProv",
               "name": "NomeProv",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2861,7 +2850,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Utente_Province",
+              "id": "Profilo_Province",
               "name": "Province",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2871,7 +2860,7 @@
           ],
           [
             {
-              "id": "Utente_CodUser",
+              "id": "Profilo_CodUser",
               "name": "CodUser",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2881,7 +2870,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Utente_CodiceComune",
+              "id": "Profilo_CodiceComune",
               "name": "CodiceComune",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2891,7 +2880,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Utente_Dati_utente",
+              "id": "Profilo_Dati_utente",
               "name": "Dati_utente",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2903,7 +2892,7 @@
           ],
           [
             {
-              "id": "Utente_Comuni",
+              "id": "Profilo_Comuni",
               "name": "Comuni",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -2915,7 +2904,7 @@
           ]
         ],
         "validOnPageLoadActions": true,
-        "id": "Utente",
+        "id": "Profilo",
         "deleted": false,
         "policies": [],
         "userPermissions": []

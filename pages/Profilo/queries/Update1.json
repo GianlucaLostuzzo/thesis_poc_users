@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Utente",
+    "pageId": "Profilo",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -44,7 +44,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Utente_Update1",
+  "id": "Profilo_Update1",
   "deleted": false,
   "gitSyncId": "62fcb9a95960e1776bd869e7_630721517bc498130593cd60"
 }

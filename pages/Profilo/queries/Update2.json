@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Comuni",
+    "name": "Update2",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -13,19 +13,19 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Utente",
+    "pageId": "Profilo",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT nome\nFROM comuni\nWHERE provincia = (SELECT codice\n\t\t\t\t\t\t\t\t\t FROM province\n\t\t\t\t\t\t\t\t\t WHERE nome = '{{Select3.selectedOptionValue}}');",
+      "body": "UPDATE utenti\n\tSET datanascita = '{{DatePicker1.selectedDate}}', cf = '{{Input1.text}}', telefono = '{{Input2.text}}'\nWHERE idutente = '{{Text11.text}}';\n\n",
       "pluginSpecifiedTemplates": [
         {
           "value": false
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +35,17 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Select3.selectedOptionValue"
+      "DatePicker1.selectedDate",
+      "Input1.text",
+      "Input2.text",
+      "Text11.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Utente_Comuni",
+  "id": "Profilo_Update2",
   "deleted": false,
-  "gitSyncId": "62fcb9a95960e1776bd869e7_63071e687bc498130593cd5c"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_63072fb77bc498130593cd6d"
 }

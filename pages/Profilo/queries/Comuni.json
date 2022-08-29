@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "NomeProv",
+    "name": "Comuni",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Utente",
+    "pageId": "Profilo",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT nome\nFROM province\nWHERE codice = '{{Text4CopyCopyCopy.text}}';",
+      "body": "SELECT nome\nFROM comuni\nWHERE provincia = (SELECT codice\n\t\t\t\t\t\t\t\t\t FROM province\n\t\t\t\t\t\t\t\t\t WHERE nome = '{{Select3.selectedOptionValue}}');",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Text4CopyCopyCopy.text"
+      "Select3.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Utente_NomeProv",
+  "id": "Profilo_Comuni",
   "deleted": false,
-  "gitSyncId": "62fcb9a95960e1776bd869e7_63071f6f7bc498130593cd5e"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_63071e687bc498130593cd5c"
 }
