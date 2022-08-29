@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "CorsiAttivi",
+    "name": "DatiCorso",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select idcorso, Nome, Erogatore, Livello, DataInizio, DataFine, Durata, Costo\nfrom Corsi\nwhere Stato = 'Attivo' and idcorso not in (select corso\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t from iscrizioni\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t where persona = {{User.data[0].idutente}});",
+      "body": "SELECT *\nFROM corsi\nWHERE idcorso = {{Table2.selectedRow.idcorso}};",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "User.data[0].idutente"
+      "Table2.selectedRow.idcorso"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Iscrizione_CorsiAttivi",
+  "id": "Iscrizione_DatiCorso",
   "deleted": false,
-  "gitSyncId": "62fcad8a5960e1776bd8692b_62fcad8b5960e1776bd8696f"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_630c867a31a46712ab4ab264"
 }

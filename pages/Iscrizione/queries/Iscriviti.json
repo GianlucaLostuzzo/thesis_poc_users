@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "insert into Iscrizioni (corso, persona, stato)\nvalues\n(\n\t{{Table2.selectedRow.idcorso}},\n\t'{{Table3.selectedRow.idutente}}',\n\t'Pendente'\n);",
+      "body": "insert into Iscrizioni (corso, persona, stato)\nvalues\n(\n\t{{Table2.selectedRow.idcorso}},\n\t{{User.data[0].idutente}},\n\t'Pendente'\n);",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -36,7 +36,7 @@
     "messages": [],
     "jsonPathKeys": [
       "Table2.selectedRow.idcorso",
-      "Table3.selectedRow.idutente"
+      "User.data[0].idutente"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

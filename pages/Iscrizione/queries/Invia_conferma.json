@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Gentile {{appsmith.user.name}}, <br>\ncon la presente si conferma che la sua richiesta d'iscrizione è stata presa in carico e verrà gestita il prima possibile. <p>\nCordiali Saluti,<br>\nLo Staff",
+      "body": "Gentile {{appsmith.user.name}}, <br>\ncon la presente si conferma che la sua richiesta d'iscrizione e' stata presa in carico e verra' gestita il prima possibile. <p>\nCordiali Saluti,<br>\nLo Staff",
       "formData": {
         "command": "SEND",
         "send": {
