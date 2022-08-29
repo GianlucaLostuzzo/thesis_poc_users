@@ -215,7 +215,11 @@
               },
               "parentRowSpace": 10,
               "hideCard": false,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
               "primaryColumns": {
                 "idcorso": {
                   "allowCellWrapping": false,
@@ -426,6 +430,7 @@
                   "cellBackground": ""
                 }
               },
+              "onRowSelected": "{{DatiCorso.run()}}",
               "key": "j69v7wmrsf",
               "isDeprecated": false,
               "rightColumn": 32,
@@ -1140,7 +1145,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Text2.text"
+                "appsmith.user.email"
               ],
               "timeoutInMillisecond": 10000
             }
