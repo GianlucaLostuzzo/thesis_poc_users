@@ -11,6 +11,10 @@
     {
       "id": "Profilo",
       "isDefault": false
+    },
+    {
+      "id": "Riepiloghi",
+      "isDefault": false
     }
   ],
   "viewMode": false,

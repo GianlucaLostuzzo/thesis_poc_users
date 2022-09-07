@@ -29,7 +29,7 @@
               "resetFormOnClick": false,
               "boxShadow": "none",
               "widgetName": "Button1",
-              "onClick": "{{Iscriviti.run(() =>\t\t\t\t\tshowAlert('Richiesta inviata!','success'), () => {});\nInvia_conferma.run()\n}}",
+              "onClick": "{{Iscriviti.run(() =>\t\t\t\t\tshowAlert('Richiesta inviata!','success'), () => {});\nInvia_conferma.run();\nCorsiAttivi.run();\nDatiCorso.run()\n}}",
               "buttonColor": "#312e81",
               "dynamicPropertyPathList": [
                 {
