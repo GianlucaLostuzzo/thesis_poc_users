@@ -526,16 +526,13 @@
                                           "key": "primaryColumns.erogatore.computedValue"
                                         },
                                         {
-                                          "key": "primaryColumns.customColumn1.borderRadius"
-                                        },
-                                        {
-                                          "key": "primaryColumns.customColumn1.boxShadow"
-                                        },
-                                        {
                                           "key": "primaryColumns.customColumn1.buttonLabel"
                                         },
                                         {
                                           "key": "primaryColumns.idcorso.computedValue"
+                                        },
+                                        {
+                                          "key": "primaryColumns.customColumn1.menuButtonLabel"
                                         }
                                       ],
                                       "leftColumn": 0,
@@ -672,7 +669,7 @@
                                           "id": "customColumn1",
                                           "alias": "customColumn1",
                                           "horizontalAlignment": "LEFT",
-                                          "columnType": "button",
+                                          "columnType": "menuButton",
                                           "enableFilter": true,
                                           "enableSort": true,
                                           "isVisible": true,
@@ -687,14 +684,16 @@
                                           "computedValue": "",
                                           "buttonStyle": "rgb(3, 179, 101)",
                                           "labelColor": "#FFFFFF",
-                                          "buttonColor": "#312e81",
-                                          "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                                          "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                                           "customAlias": "",
                                           "buttonLabel": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'Info'))}}",
                                           "buttonVariant": "SECONDARY",
                                           "onClick": "{{TipoCorso.run();\nInfoCorso.run();\nURL.run();\nshowModal('Modal1')}}",
-                                          "verticalAlignment": "CENTER"
+                                          "verticalAlignment": "CENTER",
+                                          "menuButtonLabel": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'Informazioni'))}}",
+                                          "menuColor": "#312e81",
+                                          "iconAlign": "left",
+                                          "menuButtoniconName": "info-sign",
+                                          "menuVariant": "SECONDARY"
                                         },
                                         "idcorso": {
                                           "allowCellWrapping": false,
@@ -738,6 +737,7 @@
                                       "horizontalAlignment": "LEFT",
                                       "isVisibleSearch": false,
                                       "isVisiblePagination": false,
+                                      "iconAlign": "left",
                                       "verticalAlignment": "CENTER"
                                     },
                                     {
