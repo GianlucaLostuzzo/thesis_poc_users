@@ -669,7 +669,7 @@
                                           "id": "customColumn1",
                                           "alias": "customColumn1",
                                           "horizontalAlignment": "LEFT",
-                                          "columnType": "menuButton",
+                                          "columnType": "button",
                                           "enableFilter": true,
                                           "enableSort": true,
                                           "isVisible": true,
@@ -685,15 +685,25 @@
                                           "buttonStyle": "rgb(3, 179, 101)",
                                           "labelColor": "#FFFFFF",
                                           "customAlias": "",
-                                          "buttonLabel": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'Info'))}}",
-                                          "buttonVariant": "SECONDARY",
+                                          "buttonLabel": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'Apri info'))}}",
+                                          "buttonVariant": "TERTIARY",
                                           "onClick": "{{TipoCorso.run();\nInfoCorso.run();\nURL.run();\nshowModal('Modal1')}}",
                                           "verticalAlignment": "CENTER",
                                           "menuButtonLabel": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'Informazioni'))}}",
-                                          "menuColor": "#312e81",
                                           "iconAlign": "left",
                                           "menuButtoniconName": "info-sign",
-                                          "menuVariant": "SECONDARY"
+                                          "menuVariant": "SECONDARY",
+                                          "menuItems": {
+                                            "menuItem6lvuws9zgh": {
+                                              "id": "menuItem6lvuws9zgh",
+                                              "index": 0,
+                                              "label": "Menu Item 1",
+                                              "widgetId": "a65z22ao3i",
+                                              "isDisabled": false,
+                                              "isVisible": true
+                                            }
+                                          },
+                                          "iconName": "info-sign"
                                         },
                                         "idcorso": {
                                           "allowCellWrapping": false,
