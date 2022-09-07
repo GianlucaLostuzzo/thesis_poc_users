@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "CorsiIscritti",
+    "name": "InfoCorso",
     "datasource": {
       "name": "CorsiFormazione",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select corsi.nome, corsi.erogatore, corsi.idcorso\nfrom iscrizioni\n\tjoin corsi on iscrizioni.corso = corsi.idcorso\n\tjoin utenti on iscrizioni.persona = utenti.idutente\nwhere iscrizioni.stato = 'Accettata' and utenti.idutente in (select idutente\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t from utenti\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t where mail = '{{appsmith.user.email}}');",
+      "body": "select *\nfrom corsi\nwhere idcorso = {{Table1.selectedRow.idcorso}};",
       "pluginSpecifiedTemplates": [
         {
           "value": false
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.user.email"
+      "Table1.selectedRow.idcorso"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Riepiloghi_CorsiIscritti",
+  "id": "Riepiloghi_InfoCorso",
   "deleted": false,
-  "gitSyncId": "62fcb9a95960e1776bd869e7_63185b41e2a8275bfc372939"
+  "gitSyncId": "62fcb9a95960e1776bd869e7_63186890e2a8275bfc372946"
 }
