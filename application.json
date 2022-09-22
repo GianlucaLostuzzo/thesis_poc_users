@@ -9,11 +9,11 @@
       "isDefault": true
     },
     {
-      "id": "Profilo",
+      "id": "Riepiloghi",
       "isDefault": false
     },
     {
-      "id": "Riepiloghi",
+      "id": "Profilo",
       "isDefault": false
     }
   ],
